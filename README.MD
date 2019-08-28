@@ -16,8 +16,15 @@ There are two ways that we can go about setting up `authentication` into our web
 
 ### Basic Authentication Built Into HTTP
 
-This is a very simple way to set access restricitions for specific web resources.
+Basic authentication is an authentication scheme that's built into http requests. This is a very simple way to set access restricitions for specific web resources.
 
 Credentials are `encoded` and sent through the header of the http request.
 
 ![basic auth](images/basicauth.png)
+
+`encoding` is where we transform data into another format using a publicly available scheme and is easily reversible. All you need to decode the encoding is by using the algorithim used to encode it.
+
+![encoding](images/encoding.png)
+
+Basic authentication provides no confidentiality to the transmitted credentials, so if someone were to intercept the transmitted data, it would be insanely easy to decode.
+
